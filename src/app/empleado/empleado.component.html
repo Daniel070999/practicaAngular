@@ -1,0 +1,20 @@
+<p>Nombre del empleado: {{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<p>Edad del empleado: {{edad>=18?'Mayor de edad':'Menor de edad'}}</p>
+<p>Empresa del empleado: {{empresa}}</p>
+<!--<p>Empresa del empleado: {{empresa.value}}</p> toma el valor del elemento creado como #empresa!-->
+<!--Nombre de la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro" />-->
+<!--valor 0 para que se ejecute inmediatamente!-->
+Nombre de la empresa: <input type="text" [(ngModel)]="empresa" /> <!--Obtener los valores definidos-->
+<br />
+<br />
+<!--<input type="button" value="Aceptar" (click)="llamaEmpresa(empresa.value)"/>!-->
+{{textoRegistro}}
+<br />
+Registrado: <input type="checkbox" id="registro" (click)="setUsuarioRegistrado($event)" />
+<!--binding se usa [] para cambiar en tiempo de ejecucion-->
+<br />
+Registrado: Si:<input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuRegistrado"
+    (click)="setUsuarioRegistrado($event)" /> <!--binding se usa [] para cambiar en tiempo de ejecucion-->
+No:<input type="radio" value="no" name="nRegistro" (click)="setUsuarioRegistrado($event)" />
+{{getRegistroUsuario()}}

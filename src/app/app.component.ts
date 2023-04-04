@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practicaAngular';
+  saludo = 'Saludo creado desde app.components.ts'; //interpolacion que se usa desde html con {{saludo}}
 }
