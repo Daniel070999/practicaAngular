@@ -1,5 +1,17 @@
-<div class="container">
-    <app-empleados></app-empleados>
-    <app-directiva></app-directiva>
-    <app-lista-empleados></app-lista-empleados>
-</div>
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/proyectos" class="nav-item nav-link">Proyectos</a>
+                <a href="/contacto" class="nav-item nav-link">Contacto</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

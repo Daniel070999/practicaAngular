@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Empleado } from './lista-empleados.model';
 import { ServicioEmpleadosService } from '../servicio-empleados.service';
 import { EmpleadosService } from '../empleados.service';
+import { Empleado } from '../lista-empleados/lista-empleados.model';
 
 @Component({
-  selector: 'app-lista-empleados',
-  templateUrl: './lista-empleados.component.html',
-  styleUrls: ['./lista-empleados.component.css']
+  selector: 'app-home-component',
+  templateUrl: './home-component.component.html',
+  styleUrls: ['./home-component.component.css']
 })
-export class ListaEmpleadosComponent implements OnInit {
+export class HomeComponentComponent implements OnInit {
   titulo = 'Listado de Empleados';
 
   constructor(private miServicio: ServicioEmpleadosService, private empleadosService: EmpleadosService) {
