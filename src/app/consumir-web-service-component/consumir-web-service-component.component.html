@@ -1,0 +1,30 @@
+<p>consumir-web-service-component works!</p>
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th colspan="2">Geo localización</th>
+                            <th>Sitio web</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let user of userList">
+                        <tr>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.address.geo.lat}}</td>
+                            <td>{{user.address.geo.lng}}</td>
+                            <td>{{user.website}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
