@@ -19,6 +19,7 @@ import { ErrorPersonalizadoComponent } from './error-personalizado/error-persona
 import { ConsumirWebServiceComponentComponent } from './consumir-web-service-component/consumir-web-service-component.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WebServiceAnomaliasComponent } from './web-service-anomalias/web-service-anomalias.component';
+import { WebServicePostComponent } from './web-service-post/web-service-post.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponentComponent },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'actualiza/:id', component: ActualizaComponentComponent },
   { path: 'consumir', component: ConsumirWebServiceComponentComponent },
   { path: 'anomalias', component: WebServiceAnomaliasComponent },
+  { path: 'post', component: WebServicePostComponent },
   { path: '**', component: ErrorPersonalizadoComponent }
 ]
 
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     ActualizaComponentComponent,
     ErrorPersonalizadoComponent,
     ConsumirWebServiceComponentComponent,
-    WebServiceAnomaliasComponent
+    WebServiceAnomaliasComponent,
+    WebServicePostComponent
   ],
   imports: [
     BrowserModule,

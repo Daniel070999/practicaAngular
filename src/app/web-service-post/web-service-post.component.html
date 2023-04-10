@@ -1,0 +1,40 @@
+<p>web-service-post works!</p>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Título</label>
+            <input type="text" class="form-control" [(ngModel)]="tituloForm" name="tituloForm" placeholder="Título">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Contenido</label>
+            <input type="text" class="form-control" [(ngModel)]="cuerpoForm" name="cuerpoForm" placeholder="Contenido">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Clave ID</label>
+            <input type="number" class="form-control" [(ngModel)]="claveIdForm" name="claveIdForm"
+                placeholder="Clave ID">
+        </div>
+        <br>
+        <div class="col">
+            <button type="submit" class="btn btn-primary" (click)="postMetod()">Enviar</button>
+            <div style="text-align: end;">
+                <input type="btn" class="btn btn-secondary" value="Limpiar" (click)="limpiarRegistro()"/>
+            </div>
+        </div>
+    </form>
+</div>
+<br>
+<a *ngIf="!enviado ; else enviadoForm"></a>
+<ng-template #enviadoForm>
+    <div class="container">
+        <h3>Resultados del POST</h3>
+        <div class="column">
+            <div class="row">
+                <a>Title: {{responsePost.title}}</a>
+                <a>Body: {{responsePost.body}}</a>
+                <a>userId: {{responsePost.userId}}</a>
+                <a>id: {{responsePost.id}}</a>
+            </div>
+        </div>
+    </div>
+</ng-template>

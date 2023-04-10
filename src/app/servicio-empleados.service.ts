@@ -22,7 +22,15 @@ export class ServicioEmpleadosService {
     return this.http.get('http://localhost:8082/deteccionanomalias/v1/logueo');
   }
 
-
+  /**
+   * 
+   * Metodo post obtenido desde https://jsonplaceholder.typicode.com/guide/
+   * @param data Son los parámtros que se deben enviar en el método tipo post
+   * @returns Web service para el consumo del post
+   */
+  postJava(data: any) {
+    return this.http.post('https://jsonplaceholder.typicode.com/posts', data);
+  }
   //practica
   muestraMensaje(mensaje: string) {
     alert(mensaje);
