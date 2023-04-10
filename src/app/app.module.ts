@@ -13,20 +13,20 @@ import { ServicioEmpleadosService } from './servicio-empleados.service';
 import { EmpleadosService } from './empleados.service';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { ProyectosComponentComponent } from './proyectos-component/proyectos-component.component';
-import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
 import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
 import { ConsumirWebServiceComponentComponent } from './consumir-web-service-component/consumir-web-service-component.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { WebServiceAnomaliasComponent } from './web-service-anomalias/web-service-anomalias.component';
 
-const appRoutes:Routes=[
-  {path:'', component:HomeComponentComponent},
-  {path:'proyectos', component:ProyectosComponentComponent},
-  {path:'contacto', component:ContactoComponentComponent},
-  {path:'actualiza/:id', component:ActualizaComponentComponent},
-  {path:'consumir', component:ConsumirWebServiceComponentComponent},
-  {path:'**', component:ErrorPersonalizadoComponent}
+const appRoutes: Routes = [
+  { path: '', component: HomeComponentComponent },
+  { path: 'proyectos', component: ProyectosComponentComponent },
+  { path: 'actualiza/:id', component: ActualizaComponentComponent },
+  { path: 'consumir', component: ConsumirWebServiceComponentComponent },
+  { path: 'anomalias', component: WebServiceAnomaliasComponent },
+  { path: '**', component: ErrorPersonalizadoComponent }
 ]
 
 @NgModule({
@@ -40,10 +40,10 @@ const appRoutes:Routes=[
     CaracteristicasEmpleadoCComponent,
     HomeComponentComponent,
     ProyectosComponentComponent,
-    ContactoComponentComponent,
     ActualizaComponentComponent,
     ErrorPersonalizadoComponent,
-    ConsumirWebServiceComponentComponent
+    ConsumirWebServiceComponentComponent,
+    WebServiceAnomaliasComponent
   ],
   imports: [
     BrowserModule,

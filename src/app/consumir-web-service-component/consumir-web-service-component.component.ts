@@ -12,8 +12,11 @@ export class ConsumirWebServiceComponentComponent implements OnInit {
 
   }
 
-  userList?: any[''];
+  userList: any = [];
   ngOnInit(): void {
+    this.usersService.getUsers().subscribe(
+      response => console.log(response)
+    );
     this.usersService.getUsers().subscribe(
       response => this.userList = response
     );
