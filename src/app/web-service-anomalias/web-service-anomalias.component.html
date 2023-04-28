@@ -1,5 +1,7 @@
 <p>web-service-anomalias works!</p>
 <main role="main" class="container">
+    <input type="button" class="btnClase" value="Recargar" (click)="ngOnInit()" />
+    <br><br>
     <div class="row">
         <div class="col-12">
             <div class="table-responsive">
@@ -14,7 +16,7 @@
                             <th scope="col">Ip</th>
                         </tr>
                     </thead>
-                    <!--En el repositorio de SpringBoot se limita a listar 10 registros para que no demore mucho al 
+                    <!--En el repositorio de SpringBoot se limita a listar 50 registros para que no demore mucho al 
         cargar los datos-->
                     <tbody *ngFor="let user of logueosList['logueo'] ; let i=index">
                         <tr>

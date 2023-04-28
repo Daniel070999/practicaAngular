@@ -11,8 +11,19 @@ export class ConsumirWebServiceComponentComponent implements OnInit {
   constructor(private usersService: ServicioEmpleadosService) {
 
   }
-
+  valorBuscar = '';
   userList: any = [];
+  buscar() {
+    console.log(this.valorBuscar);
+    this.usersService.getUsers().subscribe(
+      response => {
+        this.userList = response;
+        if (this.userList.name == this.valorBuscar) {
+          this.userList = response;
+        }
+      }
+    );
+  }
   ngOnInit(): void {
     this.usersService.getUsers().subscribe(
       response => console.log(response)
@@ -20,6 +31,7 @@ export class ConsumirWebServiceComponentComponent implements OnInit {
     this.usersService.getUsers().subscribe(
       response => this.userList = response
     );
+
   }
 
 }

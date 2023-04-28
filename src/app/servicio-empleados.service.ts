@@ -8,6 +8,10 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class ServicioEmpleadosService {
+  // fake store api https://fakestoreapi.com/docs 
+  getProducts(){
+    return this.http.get('https://fakestoreapi.com/products');
+  }
   //Configuracion para el consumo de web service de la practica de Java
   constructor(private http: HttpClient) { }
   getUsers() {
@@ -28,7 +32,7 @@ export class ServicioEmpleadosService {
    * @param data Son los parámtros que se deben enviar en el método tipo post
    * @returns Web service para el consumo del post
    */
-  postJava(data: any) {
+  postJava(data: Object) {
     return this.http.post('https://jsonplaceholder.typicode.com/posts', data);
   }
   //practica

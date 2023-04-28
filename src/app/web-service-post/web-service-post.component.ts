@@ -23,14 +23,26 @@ export class WebServicePostComponent implements OnInit {
     this.enviado = false;
   }
   postMetod() {
-    this.postJavaService.postJava({
-      title: this.tituloForm,
-      body: this.cuerpoForm,
-      userId: this.claveIdForm
-    }).subscribe(response => this.responsePost = response);
-    this.enviado = true;
+    if (this.tituloForm == '' || this.cuerpoForm == '' || this.claveIdForm == '') {
+      alert('Llene el formulario')
+    } else {
+      this.postJavaService.postJava({
+        title: this.tituloForm,
+        body: this.cuerpoForm,
+        userId: this.claveIdForm
+      }).subscribe(response => {
+        this.responsePost = response;
+        this.enviado = true;
+        this.consultarResultado(this.responsePost.title);
+      });
+
+    }
   }
-
-
-
+  consultarResultado(title: String) {
+    if (title == 'anomalia') {
+      alert('notificar');
+    }
+  }
 }
+
+

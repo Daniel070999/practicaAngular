@@ -16,9 +16,9 @@
         </div>
         <br>
         <div class="col">
-            <button type="submit" class="btn btn-primary" (click)="postMetod()">Enviar</button>
+            <input type="submit" class="btn btn-primary" (click)="postMetod()" value="Enviar">
             <div style="text-align: end;">
-                <input type="btn" class="btn btn-secondary" value="Limpiar" (click)="limpiarRegistro()"/>
+                <input type="button" class="btn btn-secondary" value="Limpiar" (click)="limpiarRegistro()" />
             </div>
         </div>
     </form>
@@ -28,13 +28,11 @@
 <ng-template #enviadoForm>
     <div class="container">
         <h3>Resultados del POST</h3>
-        <div class="column">
-            <div class="row">
-                <a>Title: {{responsePost.title}}</a>
-                <a>Body: {{responsePost.body}}</a>
-                <a>userId: {{responsePost.userId}}</a>
-                <a>id: {{responsePost.id}}</a>
-            </div>
+        <div class="row">
+            <a>Title: {{responsePost.title}}</a>
+            <a>Body: {{responsePost.body}}</a>
+            <a>userId: {{responsePost.userId}}</a>
+            <a>id: {{responsePost.id}}</a>
         </div>
     </div>
 </ng-template>

@@ -7,14 +7,20 @@ import { ServicioEmpleadosService } from '../servicio-empleados.service';
   styleUrls: ['./web-service-anomalias.component.css']
 })
 export class WebServiceAnomaliasComponent implements OnInit {
+
   constructor(private userLoguinService: ServicioEmpleadosService) { }
 
   logueosList: any = [];
+
   ngOnInit(): void {
     this.userLoguinService.getLogueos().subscribe(
-      response => this.logueosList = response
+      response => {
+        this.logueosList = response;
+      }, error => {
+        if (error.status == 0) {
+          alert('No hay respuesta del servidor');
+        }
+      }
     );
   }
-
-
 }

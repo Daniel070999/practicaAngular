@@ -20,6 +20,7 @@ import { ConsumirWebServiceComponentComponent } from './consumir-web-service-com
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { WebServiceAnomaliasComponent } from './web-service-anomalias/web-service-anomalias.component';
 import { WebServicePostComponent } from './web-service-post/web-service-post.component';
+import { FakeStoreComponent } from './fake-store/fake-store.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponentComponent },
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'consumir', component: ConsumirWebServiceComponentComponent },
   { path: 'anomalias', component: WebServiceAnomaliasComponent },
   { path: 'post', component: WebServicePostComponent },
+  { path: 'fakeStore', component: FakeStoreComponent },
   { path: '**', component: ErrorPersonalizadoComponent }
 ]
 
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     ErrorPersonalizadoComponent,
     ConsumirWebServiceComponentComponent,
     WebServiceAnomaliasComponent,
-    WebServicePostComponent
+    WebServicePostComponent,
+    FakeStoreComponent
   ],
   imports: [
     BrowserModule,

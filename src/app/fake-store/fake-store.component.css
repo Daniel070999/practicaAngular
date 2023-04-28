@@ -1,0 +1,22 @@
+.img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.cont-price {
+    padding: 10px 10px;
+    position: absolute;
+}
+
+.price {
+    background-color: rgba(5, 5, 5, 0.5);
+    color: white;
+    text-align: center;
+    border-radius: 25%;
+    transition: all 0.3s ease-in-out;
+}
+
+.price:hover {
+    background-color: rgba(0, 129, 0, 0.5);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.534);
+}
